@@ -83,6 +83,7 @@ set(TOOLS_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/tools/src/sl_tools.cpp)
 set(ZED_NODELET_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/zed_nodelet/src/zed_wrapper_nodelet.cpp)
 set(RGBD_SENS_SYNC_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/rgbd_sensors_sync_nodelet/src/rgbd_sensor_sync.cpp)
 set(RGBD_SENS_DEMUX_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/rgbd_sensors_demux_nodelet/src/rgbd_sensor_demux.cpp)
+set(STEREO_SYNC_SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/stereo_sync_nodelet/src/stereo_sync.cpp)
 
 ###############################################################################
 
@@ -98,6 +99,7 @@ set(INCLUDE_DIRS
     ${CMAKE_CURRENT_SOURCE_DIR}/src/zed_nodelet/include
     ${CMAKE_CURRENT_SOURCE_DIR}/src/rgbd_sensors_sync_nodelet/include
     ${CMAKE_CURRENT_SOURCE_DIR}/src/rgbd_sensors_demux_nodelet/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/stereo_sync_nodelet/include
 )
 
 link_directories(${ZED_LIBRARY_DIR})
@@ -121,6 +123,7 @@ add_library(ZEDNodelets
     ${ZED_NODELET_SRC}
     ${RGBD_SENS_SYNC_SRC}
     ${RGBD_SENS_DEMUX_SRC}
+    ${STEREO_SYNC_SRC}
 )
 target_include_directories(ZEDNodelets PRIVATE ${INCLUDE_DIRS})
 target_link_libraries(ZEDNodelets ${LINK_LIBRARIES})

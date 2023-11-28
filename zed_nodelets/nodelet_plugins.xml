@@ -16,4 +16,10 @@
            base_class_type="nodelet::Nodelet">
       <description>This is the nodelet for ZED Camera to demux messages synchronized with `zed_nodelets/RgbdSensorsSyncNodelet`.</description>
     </class>
+
+    <class name="zed_nodelets/StereoSyncNodelet"
+           type="zed_nodelets::StereoSyncNodelet"
+           base_class_type="nodelet::Nodelet">
+      <description>This is the nodelet for ZED Camera to provide synchronized rectified left gray image and rectified right gray image.</description>
+    </class>
 </library>
